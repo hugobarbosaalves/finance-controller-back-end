@@ -1,6 +1,4 @@
 {
     "version": "2",
-    "routes": [
-        { "source": "/api/finance/:path*", "dest": "/api/finance/:path*" }
-    ]
+    "routes": [{ "src": "/api/finance/:path*", "dest": "/api/finance/:path*" }]
 }
