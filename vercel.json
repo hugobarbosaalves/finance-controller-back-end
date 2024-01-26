@@ -1,9 +1,10 @@
 {
-    "rewrites": [
+    "version": "2",
+    "builds": [
         {
-            "source": "/api/finance/:path*",
-            "destination": "/api/finance/:path*"
-        },
-        { "source": "/(.*)", "destination": "/index.html" }
-    ]
+            "src": "./dist/index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [{ "source": "/(.*)", "dest": "/" }]
 }

@@ -3,6 +3,9 @@
     "version": "0.0.3",
     "description": "",
     "main": "index.js",
+    "engines": {
+        "node": "21.x"
+    },
     "scripts": {
         "start": "npx tsc && rm -rf public && mkdir public && cp -r dist/* public && node dist/index.js",
         "test": "echo \"Error: no test specified\" && exit 1",
