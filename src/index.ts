@@ -17,7 +17,7 @@ import routes from './routes';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const uri = `mongodb+srv://hugoalves:${process.env.MONGO_PASSWORD}@cluster0.rgukkxj.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://hugoalves:HSesb3LtSpaB8CbU@cluster0.rgukkxj.mongodb.net/?retryWrites=true&w=majority`;
 
 const clientOptions = {
     serverApi: { version: '1', strict: true, deprecationErrors: true },
