@@ -7,9 +7,10 @@
         "node": "18.x"
     },
     "scripts": {
-        "start": "npx tsc && rm -rf public && mkdir public && cp -r dist/* public && node dist/index.js",
+        "start": "ts-node src/index.ts",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "npx tsc && rm -rf public && mkdir public && cp -r dist/* public"
+        "build": "tsc",
+        "vercel-build": "echo hello"
     },
     "keywords": [],
     "author": "Hugo Alves",
@@ -21,6 +22,7 @@
         "@types/jsonwebtoken": "^9.0.5",
         "@types/mongoose": "^5.11.97",
         "@types/node": "^20.11.6",
+        "ts-node": "^10.9.2",
         "typescript": "^5.3.3"
     },
     "dependencies": {
