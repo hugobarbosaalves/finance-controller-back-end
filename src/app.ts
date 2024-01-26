@@ -56,3 +56,5 @@ app.listen(PORT, () => {
 
     console.log(expressListEndpoints(app));
 });
+
+export default app;
