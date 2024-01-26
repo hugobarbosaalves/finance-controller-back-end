@@ -125,3 +125,6 @@ dist
 
 # npm credentials directory
 .npmrc
+
+# yarn credentials directory
+public
