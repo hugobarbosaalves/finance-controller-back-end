@@ -1,10 +1,6 @@
 {
     "version": "2",
-    "builds": [
-        {
-            "src": "./dist/index.js",
-            "use": "@vercel/node"
-        }
-    ],
-    "routes": [{ "source": "/(.*)", "dest": "/" }]
+    "routes": [
+        { "source": "/api/finance/:path*", "dest": "/api/finance/:path*" }
+    ]
 }
