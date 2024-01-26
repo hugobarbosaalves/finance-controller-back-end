@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/finance/:path*",
+            "destination": "/api/finance/:path*"
+        },
+        { "source": "/(.*)", "destination": "/index.html" }
+    ]
+}
