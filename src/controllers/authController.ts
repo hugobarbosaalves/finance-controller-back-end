@@ -1,9 +1,10 @@
-import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
+import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { User } from '../models/user';
+import User from '../models/User';
 
-const secretKey = 'E345136C6D34281EEF43B89B4E2168887B0FFB647B055738ED952455DA3D3E66';
+const secretKey =
+    'E345136C6D34281EEF43B89B4E2168887B0FFB647B055738ED952455DA3D3E66';
 
 const signUp = async (req: Request, res: Response) => {
     // Implemente a lógica de registro de usuário aqui
@@ -28,9 +29,13 @@ const signIn = async (req: Request, res: Response) => {
         }
 
         // Gerar token JWT
-        const token = jwt.sign({ userId: user._id, email: user.email }, secretKey, {
-            expiresIn: '1h', // Expira em 1 hora
-        });
+        const token = jwt.sign(
+            { userId: user._id, email: user.email },
+            secretKey,
+            {
+                expiresIn: '1h', // Expira em 1 hora
+            },
+        );
 
         // Enviar o token no corpo da resposta
         res.json({ token });
@@ -40,4 +45,4 @@ const signIn = async (req: Request, res: Response) => {
     }
 };
 
-export { signUp, signIn };
+export { signIn, signUp };

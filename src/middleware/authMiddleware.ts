@@ -5,7 +5,7 @@ const secretKey =
     'E345136C6D34281EEF43B89B4E2168887B0FFB647B055738ED952455DA3D3E66';
 
 interface AuthenticatedRequest extends Request {
-    user?: object | JwtPayload; // Defina o tipo de user conforme necessário
+    user?: object | JwtPayload;
 }
 
 const authenticate = (

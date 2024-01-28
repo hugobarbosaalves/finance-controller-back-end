@@ -6,15 +6,6 @@ import routes from './routes';
 // Configurar a conexão com o MongoDB local
 // mongoose.connect('mongodb://localhost:27017/finance_controller', {});
 
-//     //consultando todos os registros da colletions users
-//     try {
-//         // Consultar todos os usuários
-//         const users = await User.find();
-//         console.log('Usuários encontrados:', users);
-//     } catch (error: any) {
-//         console.error('Erro ao consultar usuários:', error.message);
-//     }
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 const uri = `mongodb+srv://hugoalves:HSesb3LtSpaB8CbU@cluster0.rgukkxj.mongodb.net/?retryWrites=true&w=majority`;
@@ -49,7 +40,6 @@ async function closeDatabaseConnection() {
     }
 }
 openDatabaseConnection().catch(console.dir);
-// run().catch(console.dir);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
