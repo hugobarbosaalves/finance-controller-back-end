@@ -4,10 +4,23 @@ import { authenticate } from '../middleware/authMiddleware';
 
 const router = Router();
 
-router.get('/', authenticate, BoardController.getBoards);
-router.get('/:id', authenticate, BoardController.getBoard);
-router.post('/', authenticate, BoardController.createBoard);
-router.put('/:id', authenticate, BoardController.updateBoard);
-router.delete('/:id', authenticate, BoardController.deleteBoard);
+router.get('/', authenticate, (req, res) => {
+    BoardController.getBoards(req, res);
+});
+router.get('/byEmail/:email', authenticate, (req, res): void => {
+    BoardController.getBoardsByEmail(req, res);
+});
+router.get('/:id', authenticate, (req, res): void => {
+    BoardController.getBoard(req, res);
+});
+router.post('/', authenticate, (req, res): void => {
+    BoardController.createBoard(req, res);
+});
+router.put('/:id', authenticate, (req, res): void => {
+    BoardController.updateBoard(req, res);
+});
+router.delete('/:id', authenticate, (req, res): void => {
+    BoardController.deleteBoard(req, res);
+});
 
 export default router;
