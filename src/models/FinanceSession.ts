@@ -1,17 +1,9 @@
-import mongoose, { Document, Schema } from 'mongoose';
-import { FinanceRecordSchema, IFinanceRecord } from './FinanceRecord';
+import { IFinanceRecord } from './FinanceRecord';
 
-export interface IFinanceSession extends Document {
+interface IFinanceSession {
     title: string;
+    sumOperation: boolean;
     financeRecords: IFinanceRecord[];
 }
 
-const FinanceSessionSchema: Schema = new Schema({
-    title: { type: String, required: true },
-    financeRecords: { type: [FinanceRecordSchema], required: true },
-});
-
-export default mongoose.model<IFinanceSession>(
-    'FinanceSession',
-    FinanceSessionSchema,
-);
+export { IFinanceSession };
